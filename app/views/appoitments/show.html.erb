@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @appoitment.description %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @appoitment.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @appoitment.end_time %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @appoitment.user_id %>
+</p>
+
+<p>
+  <strong>Field:</strong>
+  <%= @appoitment.field_id %>
+</p>
+
+<%= link_to 'Edit', edit_appoitment_path(@appoitment) %> |
+<%= link_to 'Back', appoitments_path %>

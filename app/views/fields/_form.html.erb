@@ -1,0 +1,48 @@
+<%= form_with(model: field, local: true) do |form| %>
+  <% if field.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(field.errors.count, "error") %> prohibited this field from being saved:</h2>
+
+      <ul>
+      <% field.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+   <div class="field">
+    <%= form.label :open_from %>
+    <%= form.time_field :open %>
+    <%= form.label :to %>
+    <%= form.time_field :close %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.label :street %>
+    <%= form.text_field :street %>
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+    <%= form.label :state %>
+    <%= form.text_field :state %>
+    <%= form.label :zip %>
+    <%= form.number_field :zip %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+

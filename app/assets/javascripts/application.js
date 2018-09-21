@@ -13,4 +13,13 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require calendar
 //= require_tree .
+//= require moment 
+//= require fullcalendar
+//= require fullcalendar/locale-all
+//= require jquery
+//= require calendar
+//= require fullcalendar_engine/application
+
+// $('#calendar').fullCalendar({});

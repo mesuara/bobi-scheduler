@@ -1,15 +1,21 @@
-<%= form_with(model: appoitment, local: true) do |form| %>
-  <% if appoitment.errors.any? %>
+<div class="ui form" id="form">
+<%= form_with(model: appointment, local: true) do |form| %>
+  <% if appointment.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(appoitment.errors.count, "error") %> prohibited this appoitment from being saved:</h2>
+      <h2><%= pluralize(appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
 
       <ul>
-      <% appoitment.errors.full_messages.each do |message| %>
+      <% appointment.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
 
   <div class="field">
     <%= form.label :description %>
@@ -26,17 +32,8 @@
     <%= form.datetime_select :end_time %>
   </div>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :field_id %>
-    <%= form.number_field :field_id %>
-  </div>
-
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+</div>

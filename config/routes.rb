@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  resources :appointments
   resources :fields
-  resources :appoitments
+  
+  resources :events
   root to: 'pages#home'
 
   devise_for :users, :controllers => { registrations: 'registrations' }

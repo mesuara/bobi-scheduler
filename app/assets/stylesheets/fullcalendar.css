@@ -802,15 +802,13 @@ NOTE: use percentage font sizes or else old IE chokes
   margin-top: 1em; }
 
 .fc-toolbar .fc-left {
-  width: 100px;
-  height: 20px;
-  background: #8fdf82;
+
+  /* background: #8fdf82; */
   float: left; }
 
 .fc-toolbar .fc-right {
-  width: 100px;
-  height: 20px;
-  background: #8fdf82;
+  background-image: url('https://i.stack.imgur.com/fMhGv.png');
+  /* background: #8fdf82; */
   float: right; }
 
 .fc-toolbar .fc-center {

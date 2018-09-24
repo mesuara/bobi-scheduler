@@ -123,6 +123,7 @@ initialize_calendar = function() {
   $('#calendar').each(function(){
     var calendar = $(this);
     calendar.fullCalendar({
+      themeSystem: 'bootstrap4',
       header: {
         left: 'prev,next today',
         center: 'title',
@@ -160,33 +161,17 @@ initialize_calendar = function() {
       }
     });
   })
-  $('.fc-prev-button').click(function () {
-    alert('prev Button is is clicked');
-});
+//   $('.fc-prev-button').click(function () {
+//     alert('prev Button is is clicked');
+// });
 
-$('.fc-next-button').click(function () {
-    alert('next button is clicked');
-});
+// $('.fc-next-button').click(function () {
+//     alert('next button is clicked');
+// });
+// $('.fc-button-prev span').click(function() {
+//   $('#calendar').fullCalendar('next');
+// });
+
 };
-$(document).on('turbolinks:load', initialize_calendar, 	$(function () { // wait for document ready
-  // init
-  var controller = new ScrollMagic.Controller();
-
-  // define movement of panels
-  var wipeAnimation = new TimelineMax()
-    .fromTo("section.panel.turqoise", 1, {x: "-100%"}, {x: "0%", ease: Linear.easeNone})  // in from left
-    .fromTo("section.panel.green",    1, {x:  "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
-    .fromTo("section.panel.bordeaux", 1, {y: "-100%"}, {y: "0%", ease: Linear.easeNone}); // in from top
-
-  // create scene to pin and link animation
-  new ScrollMagic.Scene({
-      triggerElement: "#pinContainer",
-      triggerHook: "onLeave",
-      duration: "300%"
-    })
-    .setPin("#pinContainer")
-    .setTween(wipeAnimation)
-    
-    .addTo(controller);
-})
+$(document).on('turbolinks:load', initialize_calendar
 );

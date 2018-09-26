@@ -41,9 +41,17 @@ body {
 }
 
 #form{
+    
+   text-align: center;
     margin: 10vh auto;
     width: 400px;
-   
+    height: auto;
+    background: #DBE4EE;
+    width: 400px;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 5px 5px 5px;
+    
    
     /* max-width: 500px; */
 }
@@ -52,12 +60,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 200px;
+    margin: 10vh auto;
     width: 400px;
     height: 600px;
     border: 1px solid;
     padding: 5px;
     box-shadow: 5px 5px 5px 5px;
+    background: #DBE4EE;
 }
 
 #pinContainer{

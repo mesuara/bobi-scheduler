@@ -1,3 +1,4 @@
+<div >
 <%= form_with(model: field, local: true) do |form| %>
   <% if field.errors.any? %>
     <div id="error_explanation">
@@ -41,8 +42,10 @@
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit :class=>"btn btn-info" %>
+    <%= link_to 'Back', fields_path, :class=>"btn btn-info" %>
   </div>
 <% end %>
+</div>
 
 

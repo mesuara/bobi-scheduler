@@ -23,7 +23,7 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 gem 'fullcalendar-rails'
-gem 'fullcalendar_engine'
+
 gem 'momentjs-rails'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'

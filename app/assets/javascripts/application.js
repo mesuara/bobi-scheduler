@@ -22,7 +22,7 @@
 //= require popper
 //= require bootstrap
 //= require calendar
-//= require fullcalendar_engine/application
+
 //= require_tree .
 
 // $('#calendar').fullCalendar({});

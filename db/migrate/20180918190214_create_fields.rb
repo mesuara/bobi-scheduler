@@ -3,8 +3,8 @@ class CreateFields < ActiveRecord::Migration[5.2]
     create_table :fields do |t|
       t.string :name
       t.text :description
-      t.time :open
-      t.time :close
+      t.datetime :open
+      t.datetime :close
       t.string :street
       t.string :city
       t.string :state 

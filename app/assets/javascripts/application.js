@@ -27,7 +27,7 @@
 
 // $('#calendar').fullCalendar({});
 
-$(function () { // wait for document ready
+$(document).on('turbolinks:load', function () { // wait for document ready
     // init
     var controller = new ScrollMagic.Controller();
   
@@ -61,3 +61,24 @@ $(function () { // wait for document ready
   //   eventCalendar();  
   // });
   // $(document).on('turbolinks:before-cache', clearCalendar);
+ 
+  function eventCalendar() {
+    return $('#calendar').fullCalendar({ });
+  };
+  function clearCalendar() {
+    $('#calendar').fullCalendar('delete'); 
+    $('#calendar').html('');
+  };
+
+  $(document).on('turbolinks:load', function(){
+    eventCalendar();
+     
+  });
+  $(document).on('turbolinks:before-cache', clearCalendar);
+
+//   window.onload = function () {
+//     if (! localStorage.justOnce) {
+//         localStorage.setItem("justOnce", "true");
+//         window.location.reload();
+//     }
+// }

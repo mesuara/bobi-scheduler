@@ -120,9 +120,12 @@
 //   });
 var initialize_calendar;
 initialize_calendar = function() {
+  
   $('#calendar').each(function(){
     var calendar = $(this);
+    
     calendar.fullCalendar({
+      
       themeSystem: 'bootstrap4',
       header: {
         left: 'prev,next today',
@@ -153,13 +156,14 @@ initialize_calendar = function() {
             url: event.update_url,
             data: event_data,
             type: 'PATCH'
+            
         });
       },
       
       eventClick: function(event, jsEvent, view) {
         $.getScript(event.edit_url, function() {});
       }
-    });
+    })
   })
 //   $('.fc-prev-button').click(function () {
 //     alert('prev Button is is clicked');
@@ -173,5 +177,6 @@ initialize_calendar = function() {
 // });
 
 };
-$(document).on('turbolinks:load', initialize_calendar
-);
+$(document).on('turbolinks:load', initialize_calendar);
+
+

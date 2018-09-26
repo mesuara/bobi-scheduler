@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(version: 2018_09_25_172816) do
   create_table "fields", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.time "open"
-    t.time "close"
+    t.datetime "open"
+    t.datetime "close"
     t.string "street"
     t.string "city"
     t.string "state"

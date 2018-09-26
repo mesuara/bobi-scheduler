@@ -25,8 +25,7 @@
   </head>
 
   <body>
-         <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+        
 
       
       <header class="ui top fixed menu">
@@ -43,22 +42,24 @@
         <%# animation: run 20s normal;"> %> 
         <div>
       <% if !current_user %>
-            <a href="/appointments"><button class="button button5">Appointments</button></a>
-            <a href="/users/sign_in"><button class="button button5">Sign in</button></a>
+            <a href="/appointments"><button class="btn btn-info">Appointments</button></a>
+            <a href="/users/sign_in"><button class="btn btn-info">Sign in</button></a>
            
-            <a href="/users/sign_up"><button class="button button5">Sign up</button></a>
+            <a href="/users/sign_up"><button class="btn btn-info">Sign up</button></a>
 
        
         <%else%>
-            <a href="/appointments"><button class="button button5">Appointments</button></a>
-            <a href="/<%=current_user.name%>"><button class="button button5">Profile</button></a>
-            <%= link_to 'Sign out', destroy_user_session_path, method: :delete , :class => "button button5"%>
+            <a href="/appointments"><button class="btn btn-info">Appointments</button></a>
+            <a href="/<%=current_user.name%>"><button class="btn btn-info">Profile</button></a>
+            <%= link_to 'Sign out', destroy_user_session_path, method: :delete , :class => "btn btn-info"%>
             
       
       <% end %>
       </div>
       </div>
         </header>
+         <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
     <%= yield %>
     
        <footer>

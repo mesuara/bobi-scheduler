@@ -1,5 +1,4 @@
-<p id="notice"><%= notice %></p>
-
+<div id="form">
 <p>
   <strong>Title:</strong>
   <%= @appointment.title %>
@@ -20,5 +19,15 @@
   <%= @appointment.end_time %>
 </p>
 
+ <%if !current_user%>
+<%= link_to 'Back', appointments_path %>
+<%elsif current_user.admin%>
 <%= link_to 'Edit', edit_appointment_path(@appointment) %> |
 <%= link_to 'Back', appointments_path %>
+
+ <%elsif current_user.id == @appointment.id%>
+  <%= link_to 'Edit', edit_appointment_path(@appointment) %> |
+<%= link_to 'Back', appointments_path %>
+ 
+<%end%>
+</div>

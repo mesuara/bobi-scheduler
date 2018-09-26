@@ -8,9 +8,10 @@
 }
 
 body {
-    margin: 0 !important;
+    margin: 0 auto !important;
+    
     /* background-image: linear-gradient(to right top, #256d1b, #418c1f, #5fab20, #82cb1d, #a8eb12); */
-    background-color: #f7f7f7;
+    background-color: #47624F;
   }
 
 .top-nav {
@@ -19,9 +20,14 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-image: linear-gradient(to right top, #256d1b, #418c1f, #5fab20, #82cb1d, #a8eb12);
+    // background-image: linear-gradient(to right top, #256d1b, #418c1f, #5fab20, #82cb1d, #a8eb12);
+    border-bottom: 1px solid;
+    box-shadow: 0px 0px 5px 5px;
     padding: 10px 10px;
     margin: 0;
+    margin-bottom: 5px;
+    
+    
     
 }
    
@@ -36,8 +42,22 @@ body {
 
 #form{
     margin: 10vh auto;
-    width: 300px;
+    width: 400px;
+   
+   
     /* max-width: 500px; */
+}
+
+.for{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 200px;
+    width: 400px;
+    height: 600px;
+    border: 1px solid;
+    padding: 5px;
+    box-shadow: 5px 5px 5px 5px;
 }
 
 #pinContainer{
@@ -79,26 +99,7 @@ body {
     
 }
 
-.button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
 
-.button5 {
-    background-color: white;
-    color: black;
-    border: 2px solid #555555;
-}
 
 .button5:hover {
     background-color: #555555;
@@ -129,8 +130,12 @@ body {
 
 footer{
     margin-bottom: 0px;
-    background-image: linear-gradient(to right top, #256d1b, #418c1f, #5fab20, #82cb1d, #a8eb12);
+    // background-image: linear-gradient(to right top, #256d1b, #418c1f, #5fab20, #82cb1d, #a8eb12);
     height: 200px;
+    padding-top: 30px;
+    border-top: 1px solid;
+    box-shadow: 0px 0px 5px 5px;
+    
 
 }
 
@@ -138,7 +143,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-content: center;
-    
+    color: white;
     
 }
 
@@ -156,26 +161,50 @@ footer{
 }
 
 #calendar {
-    max-width: 1200px;
+    max-width: 850px;
     margin: 40px auto;
+    background:#DBE4EE;
+    padding: 10px;
+    box-shadow: 5px 10px;
+
   }
 
   #nameimg{
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+      height: 400px;
+      background: #DBE4EE;
+      width: 400px;
+      border: 1px solid;
+      padding: 5px;
+      box-shadow: 5px 5px 5px 5px;
+      
+    //   border-radius: 80%;
+    //   background: #4CAF50;
   }
 
   .lin{
       text-decoration: none;
-      color: black;
+      color: white;
+      .lin:hover{
+          color:green;
+      }
   }
 
   #profile{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    height: 800px;
+    width: 95%;  
+    padding: 10px;
+    justify-content:space-around;
     align-items: center;
+    margin-left:40px;
+    border: 1px solid;
+   margin-top:15px;
+    box-shadow: 5px 10px;
+    background: #57705F;
   }
 
   #getstarted{
@@ -191,4 +220,75 @@ footer{
       justify-content: center;
   }
 
-  
+.mickey{
+    width: 20vw;
+    height: 40vh;
+    border-radius: 80%;
+    background: #4CAF50;
+}
+
+.cate{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 200px;
+    background: #DBE4EE;
+    height: 300px;
+    width: 300px;
+    box-shadow: 2px;
+    text-align: center;
+    list-style: none;
+    font-size: 30px;
+    border: 1px solid;
+    padding: 5px;
+    box-shadow: 5px 5px 5px 5px;
+    li{
+        font-size:20px ;
+    }
+}
+
+.appo{
+    padding: 10px;
+    box-shadow: 5px 10px;
+    background: #57705F;
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+    height:800px;
+    border: 1px solid;
+    margin-left:40px;
+}
+
+tbody{
+    font-size:20px;
+}
+
+a{
+    color: black;
+}
+
+.apptable{
+    border: 1px solid;
+    height: auto;
+    background: #DBE4EE;
+    padding: 10px;
+    box-shadow: 5px 10px;
+    margin: 40px auto;
+}
+
+.hometext{
+    border: 1px solid;
+    height: auto;
+    background: #DBE4EE;
+    padding: 10px;
+    box-shadow: 5px 10px;
+    margin-bottom: 20px;
+}
+
+.notice{
+    position: absolute;
+}
+.alert{
+    position: absolute;
+    
+}

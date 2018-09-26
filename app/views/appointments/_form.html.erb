@@ -32,6 +32,22 @@
     <%= form.datetime_select :end_time %>
   </div>
 
+  <div class="field">
+    <% form.label :field_id%> Field: 
+<%= form.select(:field_id) do %>
+                <% @field.order('name ASC').each do |field_select| %>
+                  <%= content_tag(:option, field_select.name, value: field_select.id) %>
+                <% end %>
+            <% end %>
+           
+  </div>
+
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

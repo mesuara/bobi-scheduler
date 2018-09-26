@@ -159,3 +159,36 @@ footer{
     max-width: 1200px;
     margin: 40px auto;
   }
+
+  #nameimg{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .lin{
+      text-decoration: none;
+      color: black;
+  }
+
+  #profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #getstarted{
+      z-index: 200;
+      position: absolute;
+      margin-top: 400px;
+      margin-left: 650px;
+  }
+
+  #error{
+      display: flex;
+      justify-items: center;
+      justify-content: center;
+  }
+
+  

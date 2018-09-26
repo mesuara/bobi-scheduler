@@ -9,13 +9,18 @@ class FieldsController < ApplicationController
 
   # GET /fields/1
   # GET /fields/1.json
+ 
   def show
   end
 
   # GET /fields/new
   def new
+    if current_user.admin
     @field = Field.new
+    else
+      redirect_to 'pages/error'
   end
+end
 
   # GET /fields/1/edit
   def edit
@@ -24,6 +29,7 @@ class FieldsController < ApplicationController
   # POST /fields
   # POST /fields.json
   def create
+    if current_user.admin
     @field = Field.new(field_params)
 
     respond_to do |format|
@@ -35,11 +41,15 @@ class FieldsController < ApplicationController
         format.json { render json: @field.errors, status: :unprocessable_entity }
       end
     end
+  else
+    redirect_to 'pages/error'
+  end
   end
 
   # PATCH/PUT /fields/1
   # PATCH/PUT /fields/1.json
   def update
+    if current_user.admin
     respond_to do |format|
       if @field.update(field_params)
         format.html { redirect_to @field, notice: 'Field was successfully updated.' }
@@ -49,16 +59,26 @@ class FieldsController < ApplicationController
         format.json { render json: @field.errors, status: :unprocessable_entity }
       end
     end
+  else
+    redirect_to 'pages/error'
+
+  end
+  
   end
 
   # DELETE /fields/1
   # DELETE /fields/1.json
   def destroy
+    if current_user.admin
     @field.destroy
     respond_to do |format|
       format.html { redirect_to fields_url, notice: 'Field was successfully destroyed.' }
       format.json { head :no_content }
     end
+  else
+    redirect_to 'pages/error'
+
+  end
   end
 
   private

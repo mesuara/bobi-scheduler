@@ -9,7 +9,7 @@
   
  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-     
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
    
@@ -31,11 +31,11 @@
       
       <header class="ui top fixed menu">
       <div class="top-nav">
-      <h1 id="logo">B <span><img src="https://media.giphy.com/media/c6VvvRLR3aIIKxiYdD/giphy.gif" id="ball" style="position: absolute; height:70px;
+      <a class="lin" href="/"><h1 id="logo">B <span><img src="https://media.giphy.com/media/c6VvvRLR3aIIKxiYdD/giphy.gif" id="ball" style="position: absolute; height:70px;
         
        
         <%# margin-left: 1166px; %>
-        animation: run 20s normal;"></span> <span id="logobi">BI</span></h1>
+        animation: run 20s normal;"></span> <span id="logobi">BI</span></h1></a>
       <%# <img src="https://media.giphy.com/media/c6VvvRLR3aIIKxiYdD/giphy.gif" id="ball" style="position: absolute;
         
        
@@ -43,16 +43,17 @@
         <%# animation: run 20s normal;"> %> 
         <div>
       <% if !current_user %>
-        
+            <a href="/appointments"><button class="button button5">Appointments</button></a>
             <a href="/users/sign_in"><button class="button button5">Sign in</button></a>
            
             <a href="/users/sign_up"><button class="button button5">Sign up</button></a>
 
        
         <%else%>
-         
+            <a href="/appointments"><button class="button button5">Appointments</button></a>
+            <a href="/<%=current_user.name%>"><button class="button button5">Profile</button></a>
             <%= link_to 'Sign out', destroy_user_session_path, method: :delete , :class => "button button5"%>
-           
+            
       
       <% end %>
       </div>

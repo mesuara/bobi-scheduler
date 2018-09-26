@@ -1,0 +1,27 @@
+<%if current_user.admin%>
+<div id="profile">
+<div id="nameimg">
+<h1>Welcome <%=@profile.name %></h1>
+<img src="https://www.disneyclips.com/imagesnewb/images/mickey-soccer4.png">
+</div>
+<ul> Categories
+<li><a href="/appointments">Appointments</a></li>
+<li><a href="/fields">Fields</a></li>
+</ul>
+
+</div>
+<%else%>
+<div id="profile">
+<div id="nameimg">
+<h1>Welcome <%=@profile.name %></h1>
+<img src="https://www.disneyclips.com/imagesnewb/images/mickey-soccer4.png">
+
+</div>
+ <ul> Appointments <a href="appointments/new"><i class="fas fa-plus"></i></a>
+  <% @appointment.each do |appoi|%>
+        <li><a href="/appointments/<%=appoi.id%>"><%= appoi.title %></a></li>
+  <%end%>
+ </ul>
+</div>
+
+<%end%>

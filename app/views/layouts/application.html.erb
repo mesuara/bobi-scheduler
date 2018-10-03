@@ -42,14 +42,14 @@
         <%# animation: run 20s normal;"> %> 
         <div>
       <% if !current_user %>
-            <a href="/appointments"><button class="btn btn-info">Appointments</button></a>
+            <a id="reload" href="/appointments"><button class="btn btn-info">Appointments</button></a>
             <a href="/users/sign_in"><button class="btn btn-info">Sign in</button></a>
            
             <a href="/users/sign_up"><button class="btn btn-info">Sign up</button></a>
 
        
         <%else%>
-            <a href="/appointments"><button class="btn btn-info">Appointments</button></a>
+            <a id="reload"href="/appointments"><button class="btn btn-info">Appointments</button></a>
             <a href="/<%=current_user.name%>"><button class="btn btn-info">Profile</button></a>
             <%= link_to 'Sign out', destroy_user_session_path, method: :delete , :class => "btn btn-info"%>
             
@@ -75,4 +75,9 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"> </script>
        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
   </body>
+   <script>
+ document.getElementById('reload').addEventListener('click', (e)=>{
+            window.location.reload()
+        })
+  </script>
 </html>

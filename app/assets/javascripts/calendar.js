@@ -162,6 +162,7 @@ initialize_calendar = function() {
       
       eventClick: function(event, jsEvent, view) {
         $.getScript(event.edit_url, function() {});
+        
       }
     })
   })

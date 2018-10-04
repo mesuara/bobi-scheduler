@@ -44,8 +44,13 @@
 
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= form.label :confirm_your_name %>
+   
+      <%= form.select(:user_id) do %>
+                <% @user.order('last_name ASC').each do |user_select| %>
+                  <%= content_tag(:option, user_select.last_name, value: user_select.id) %>
+                <% end %>
+            <% end %>
   </div>
 
   <div class="actions">

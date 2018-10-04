@@ -16,11 +16,13 @@ class AppointmentsController < ApplicationController
   def new
     @appointment = Appointment.new
     @field = Field.all
+    @user = User.all
   end
 
   # GET /appointments/1/edit
   def edit
     @field = Field.all
+    @user = User.all
   end
 
   # POST /appointments

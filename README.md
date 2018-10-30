@@ -1,25 +1,19 @@
-# README
+# Bobi Scheduler
+This is an app that I built to help a business. The good thing about it is that it can be used for a different kind of business. This one is adjusted for a business that rents the soccer fields by hours, but as I mentioned it can be adjusted to other businesses too... for example dancing studio, doctor appointments. The user doesn't need to sing up to be able to make an appointment, but they don't have access to change it or delete if they didn't sign up. I used the FullCalendar gem to show the appointments.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
 
-* Database creation
 
-* Database initialization
+### Built with:
+* Ruby on Rails
+* Bootstrap
+* FullCalendar
+* Magic Scroll
 
-* How to run the test suite
+# Acknowledgments
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# bobi-scheduler
+* [FullCalendar](https://fullcalendar.io/)
+* [SemanticUI](https://semantic-ui.com/)

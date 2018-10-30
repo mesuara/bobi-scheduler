@@ -17,4 +17,4 @@ This is an app that I built to help a business. The good thing about it is that 
 # Acknowledgments
 
 * [FullCalendar](https://fullcalendar.io/)
-* [SemanticUI](https://semantic-ui.com/)
+

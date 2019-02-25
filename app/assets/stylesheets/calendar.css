@@ -1,0 +1,14 @@
+@import url(/Users/mesuara/Desktop/NYCDA/projects/bobi-scheduler/app/assets/stylesheets/fullcalendar.css);
+@import url(/Users/mesuara/Desktop/NYCDA/projects/bobi-scheduler/app/assets/stylesheets/fullcalendar.css);
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+  font-size: 14px;
+}
+
+#calendar {
+  max-width: 900px;
+  margin: 40px auto;
+}
+/*# sourceMappingURL=calendar.css.map */
